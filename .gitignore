@@ -24,3 +24,11 @@ proguard/
 
 # Log Files
 *.log
+
+#generate by AndroiStudio
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
