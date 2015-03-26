@@ -1,7 +1,9 @@
 package peoce.info.wesee;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.animation.Animation;
@@ -15,8 +17,16 @@ public class Welcome extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         ImageView imageView = (ImageView) findViewById(R.id.welcome_iv_1);
-        Animation animation= AnimationUtils.loadAnimation(this,R.anim.welcome_scale);
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.welcome_scale);
         imageView.setAnimation(animation);
+        final Intent intent = new Intent(this, Login.class);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(intent);
+                finish();
+            }
+        }, 1200);
     }
 
 

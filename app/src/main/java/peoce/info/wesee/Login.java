@@ -4,15 +4,26 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 
 
-public class MainActivity extends ActionBarActivity {
+public class Login extends ActionBarActivity {
+    EditText et1, et2;
+    Button bt1, bt2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
+        init();
+    }
 
+    private void init() {
+        et1 = (EditText) findViewById(R.id.login_et_1);
+        et2 = (EditText) findViewById(R.id.login_et_2);
+        bt1 = (Button) findViewById(R.id.login_bt_1);
+        bt2 = (Button) findViewById(R.id.login_bt_2);
     }
 
 
