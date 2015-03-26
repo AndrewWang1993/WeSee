@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">WeSee</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="main_title1">唯见</string>
+    <string name="main_title2">只为遇见更好的风景</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_welcome">Welcome</string>
 </resources>

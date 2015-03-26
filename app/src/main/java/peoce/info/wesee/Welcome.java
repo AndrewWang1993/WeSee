@@ -4,22 +4,26 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 
-public class MainActivity extends ActionBarActivity {
-
+public class Welcome extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_welcome);
+        ImageView imageView = (ImageView) findViewById(R.id.welcome_iv_1);
+        Animation animation= AnimationUtils.loadAnimation(this,R.anim.welcome_scale);
+        imageView.setAnimation(animation);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_welcome, menu);
         return true;
     }
 
